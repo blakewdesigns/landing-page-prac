@@ -8,6 +8,20 @@
     src: url(/fonts/futura-heavy.ttf);
 }
 
+h2 {
+    font-family: "futura-heavy";
+    font-size: 1.35rem;
+}
+
+h4 {
+    font-family: "futura";
+    color: white;
+}
+
+.wrapper1 {
+    height: 100vh;
+}
+
 header {
     display: flex;
     padding: 40px 20px;
@@ -29,6 +43,10 @@ header .logowrapper img{
     width: 50%;
 }
 
+nav {
+    display: none;
+}
+
 .hamburgerwrapper img {
     width: 40px;
     display: block;
@@ -36,17 +54,265 @@ header .logowrapper img{
     margin-top: 10px;
 }
 
+.herowrapper {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/hero/herobg2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
 .hero {
     font-family: "futura-heavy";
-    height: 800px;
-    background-image: url(images/backgrounds/hero-bg-texture.png);
-    background-repeat: no-repeat;
-    background-size: 100% 50%;
-    padding-left: 20px;
+    /* height: 100vh; */
+    
+}
+
+.hero .herotext h2 {
+    color: rgb(49, 59, 59);
+    line-height: 13px;
+    font-size: 1.35rem;
+}
+
+.herotext {
+    padding-left: 15px;
     padding-top: 50px;
 }
 
-.hero h2 {
-    color: rgb(49, 59, 59);
-    line-height: 15px;
+.headerimage {
+    padding-top: 85px;
+}
+
+.hero img {
+    display: block;
+    margin: 0 auto;
+    box-shadow: 2px 2px 30px 1.5px rgba(128, 128, 128, 0.356);
+    width: 92%;
+}
+
+.features {
+    width: 100%;
+    text-align: center;
+}
+
+.features h2{
+    background: linear-gradient(45deg, rgb(39, 125, 255), rgb(173, 0, 253));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 70px;
+}
+
+.features :nth-child(5){
+    box-shadow: 2px 2px 30px 1.5px rgba(128, 128, 128, 0.356);
+    width: 92%;
+    margin-top: 50px;
+}
+
+.products {
+    width: 100%;
+    margin-top: 175px;
+    margin-bottom: 70px;
+}
+
+.products h2{
+    background: linear-gradient(45deg, rgb(39, 125, 255), rgb(173, 0, 253));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto;
+    padding: 0px 40px;
+    max-width: 20%;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list .productwrapper{
+    width: 50%;
+}
+
+.list .productwrap {
+    padding: 30px;
+}
+
+.productwrap img{
+    display: block;
+    height: auto;
+}
+
+footer {
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(45deg, rgb(39, 125, 255), rgb(173, 0, 253));
+    margin-top: 150px;
+}
+
+.footertext {
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+}
+
+.footform {
+    text-align: center;
+    margin-top: 50px
+}
+
+.footform input {
+    width: 50%;
+    padding: 8px 10px;
+    padding-left: 20px;
+    font-family: "futura-heavy";
+    border-radius: 20px;
+    border: none;
+    margin-right: 15px;
+    background-color: rgba(147, 145, 255, 0.644);
+    color: rgba(255, 255, 255, 0.589);
+    box-shadow: 2px 2px 30px 1.5px rgba(128, 128, 128, 0.356);
+}
+
+.footform button {
+    font-family: "futura-heavy";
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 30px 1.5px rgba(128, 128, 128, 0.356);
+    color: rgb(52, 89, 255);
+}
+
+.footlinks {
+    text-align: right;
+    line-height: 20px;
+    font-size: .6rem;
+    margin-top: 80px;
+    margin-right: 20px;
+}
+
+@media (min-width: 520px){
+    .herowrapper {
+        background-image: url(images/hero/texture.png);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media (min-width: 820px){
+    .herowrapper {
+        background-image: url(images/backgrounds/hero-bg-cards.png), url(images/backgrounds/hero-bg-texture.png);
+        background-size: contain;
+        height: 100vh;
+    }
+
+    .wrapper1 {
+        background: none;
+    }
+
+    .logowrapper {
+        margin-left: 100px;
+    }
+
+    .hero .herotext h2{
+        font-size: 2.5rem;
+        margin-left: 100px;
+    }
+
+    .hero .herotext :nth-child(1){
+        padding-top: 50px;
+    }
+
+    .hamburgerwrapper {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        justify-content: flex-end;
+        margin-right: 100px;
+    }
+
+    nav li{
+        padding: 10px;
+        font-family: "futura";
+        font-size: .8rem;
+    }
+
+    nav button{
+        padding: 15px 25px;
+        border-radius: 30px;
+        font-size: .8rem;
+        border: none;
+        background-color: rgb(151, 72, 255);
+        color: white;
+    }
+
+    .headerimage {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .features {
+        flex-direction: row;
+        margin-top: 80px;
+    }
+
+    .features h2 {
+        font-size: 2.5rem;
+    }
+
+    .features img{
+        width: 25%;
+        padding: 30px;
+    }
+
+    .features :nth-child(5){
+        width: 78%;
+    }
+
+    .products h2{
+        max-width: 35%;
+        font-size: 2.5rem;
+    }
+
+    .list{
+        align-items: center;
+    }
+
+    .list .productwrapper{
+        width: 15%;
+        padding: 20px;
+    }
+
+    footer {
+        height: 600px;
+    }
+
+    .footertext h2{
+        font-size: 2.5rem;
+    }
+
+    .footform input{
+        font-size: 1.25rem;
+        width: 30%;
+    }
+
+    .footform button{
+        font-size: 1rem;
+        padding: 12px 12px;
+    }
+
+    .footlinks{
+        padding-right: 80px;
+        font-size: .9rem;
+        padding-top: 80px;
+    }
 }
